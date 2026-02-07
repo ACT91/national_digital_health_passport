@@ -232,6 +232,15 @@ class HealthDashboard extends StatelessWidget {
             letterSpacing: -0.5,
           ),
         ),
+        const SizedBox(height: 4),
+        Text(
+          'Secure, Cloud-Based Medical Records for Every Malawian',
+          style: TextStyle(
+            fontSize: 13,
+            color: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+            letterSpacing: 0.2,
+          ),
+        ),
         const SizedBox(height: 24),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -320,7 +329,7 @@ class HealthDashboard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'PATIENT INTAKE',
+                  'SECURE PATIENT ACCESS',
                   style: TextStyle(
                     color: Colors.blue.shade100,
                     fontSize: 11,
@@ -338,13 +347,22 @@ class HealthDashboard extends StatelessWidget {
                     height: 1.2,
                   ),
                 ),
+                const SizedBox(height: 8),
+                Text(
+                  'Access complete medical history instantly\nwith fingerprint verification',
+                  style: TextStyle(
+                    color: Colors.blue.shade50,
+                    fontSize: 13,
+                    height: 1.5,
+                  ),
+                ),
                 const SizedBox(height: 24),
                 Row(
                   children: [
                     ElevatedButton.icon(
                       onPressed: () {},
                       icon: const Icon(Icons.fingerprint, size: 20),
-                      label: const Text('Scan Patient'),
+                      label: const Text('Scan Fingerprint'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                         foregroundColor: const Color(0xFF3B82F6),
@@ -367,7 +385,7 @@ class HealthDashboard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      child: const Text('Enter National ID'),
+                      child: const Text('Manual ID Entry'),
                     ),
                   ],
                 ),
@@ -899,7 +917,7 @@ class HealthDashboard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Patient's Recent History",
+            "Complete Medical History",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 14,
@@ -915,9 +933,25 @@ class HealthDashboard extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildHistoryItem(
+            Icons.medication_rounded,
+            Colors.purple,
+            'Prescription: Ibuprofen 400mg',
+            'Oct 25, 2023',
+            isDark,
+          ),
+          const SizedBox(height: 16),
+          _buildHistoryItem(
+            Icons.biotech_rounded,
+            Colors.orange,
+            'Lab Test: Blood Analysis',
+            'Oct 22, 2023',
+            isDark,
+          ),
+          const SizedBox(height: 16),
+          _buildHistoryItem(
             Icons.coronavirus_rounded,
             Colors.red,
-            'Malaria Test',
+            'Diagnosis: Malaria (Treated)',
             'Oct 20, 2023',
             isDark,
           ),
@@ -925,7 +959,7 @@ class HealthDashboard extends StatelessWidget {
           _buildHistoryItem(
             Icons.vaccines_rounded,
             Colors.green,
-            'COVID-19 Vaccination',
+            'Vaccination: COVID-19 Booster',
             'Aug 15, 2023',
             isDark,
           ),
