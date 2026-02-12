@@ -1,3 +1,17 @@
+/// National Digital Health Passport
+/// 
+/// A secure, cloud-based medical records system for Malawi.
+/// This application provides health workers with access to patient records,
+/// health trends, medication adherence tracking, and insurance information.
+/// 
+/// Features:
+/// - Secure patient access with National ID & Fingerprint Sync
+/// - Real-time health monitoring and statistics
+/// - Medical history tracking
+/// - Insurance balance management
+/// 
+/// Licensed under the MIT License.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fl_chart/fl_chart.dart';
